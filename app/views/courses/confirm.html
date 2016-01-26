@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Delete a course</title>
+	<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+</head>
+<body>
+<h3>Are you sure you want to delete the following course?</h3>
+<p>Name: {{course_info.name}}</p>
+<p>Description: {{course_info.description}}</p>
+<form action='/'>
+	<input type='submit' value='No!'>
+	</form>
+<form action='/courses/destroy' method="POST">
+	<input type='hidden' value='{{course_info.id'>
+	<input type='submit' value='Yes! I want to delete this'>
+</form>
+</body>
+</html>
